@@ -1,73 +1,81 @@
-# React + TypeScript + Vite
+<div align="center">
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# 🐾 PawPalace
 
-Currently, two official plugins are available:
+### Premium Pet Boarding Management SaaS Platform
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+A full-featured pet boarding management system built with **one prompt** using [Verdent](https://www.verdent.ai).
 
-## React Compiler
+[**Try it live**](https://verdent-ai.github.io/paw-palace) · [Report Issue](https://github.com/verdent-ai/paw-palace/issues)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+</div>
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Overview
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+PawPalace is a complete SaaS platform for pet boarding businesses — featuring a stunning landing page, admin dashboard with analytics, booking management, pet health profiles, and customer CRM.
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+This project demonstrates how a single AI prompt can produce a production-quality web application. It's open-sourced as a **learning reference** for anyone looking to build their own niche SaaS.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## Features
+
+| Module | Description |
+|---|---|
+| **Landing Page** | Hero with animations, feature showcase, how-it-works flow, testimonials, CTA |
+| **Dashboard** | Revenue charts, occupancy rates, active bookings overview, boarding status |
+| **Bookings** | Card-based booking management with search, status filters, and add-on tracking |
+| **Pet Profiles** | Photo cards with health info, vaccination status, temperament tags, owner notes |
+| **Customers** | Customer CRM with VIP tiers, visit history, spending analytics |
+| **Settings** | Business profile, notification preferences, theme customization |
+
+## Tech Stack
+
+- **Framework:** React 19 + TypeScript
+- **Build Tool:** Vite
+- **Styling:** Tailwind CSS 4
+- **Animations:** Framer Motion
+- **Charts:** Recharts
+- **Icons:** Lucide React
+- **Routing:** React Router 7
+
+## Getting Started
+
+```bash
+# Clone the repo
+git clone https://github.com/verdent-ai/paw-palace.git
+cd paw-palace
+
+# Install dependencies
+npm install
+
+# Start dev server
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Open [http://localhost:5173](http://localhost:5173) to view it.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Project Structure
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
 ```
+src/
+├── components/
+│   ├── landing/       # Landing page sections (Hero, Features, etc.)
+│   ├── layout/        # App shell (Sidebar, Header, Footer)
+│   └── ui/            # Reusable components (Button, Card, Badge, Input)
+├── pages/             # Route pages (Dashboard, Bookings, Pets, Customers, Settings)
+├── data/              # Mock data and type definitions
+└── utils/             # Utility functions
+```
+
+## License
+
+MIT
+
+---
+
+<div align="center">
+
+Built with [Verdent](https://www.verdent.ai) — an AI coding agent that handled the full workflow in a single conversation.
+
+</div>
